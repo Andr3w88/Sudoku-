@@ -1,14 +1,14 @@
 :root {
     --bg-main: #218380;
     --bg-body: white;
-    --color-txt: black;
-    --filled-color: black;
+    --color-txt: #000;
+    --filled-color: #000;
     --filled-bg: #73d2de;
 
-    --white: white;
+    --white: #fff;
     --tan: #dbb68f;
     --red: #8f2d56;
-    --black: black;
+    --black: #000;
 
     --nav-size: 70px;
     --sudoku-cell-size: 50px;
@@ -29,7 +29,7 @@
     --bg-body: #1a1a2e;
     --color-txt: white;
     --filled-color: white;
-    --filled-bg: black;
+    --filled-bg: #000;
 }
 
 * {
@@ -47,7 +47,6 @@ body {
     user-select: none;
 }
 
-/* nav bar */
 input {
     font-family: 'Merienda', cursive;
     border: 2px solid var(--bg-main);
@@ -115,9 +114,6 @@ nav {
     display: none;
 }
 
-/* end nav bar */
-
-/* start screen */
 .main {
     /* height: 100vh; */
     padding-top: var(--nav-size);
@@ -189,7 +185,24 @@ nav {
     animation: bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* end start screen */
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(20px);
+    }
+
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .main-game {
     display: flex;
     height: 100%;
@@ -370,8 +383,36 @@ nav {
     animation: zoom-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+@keyframes zoom-in {
+    0% {
+        transform: scale(3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .cell-err {
     animation: zoom-out-shake 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes zoom-out-shake {
+    0% {
+        transform: scale(2);
+    }
+
+    25% {
+        transform: scale(2) rotate(30deg);
+    }
+
+    50% {
+        transform: scale(2) rotate(-30deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media only screen and (max-width: 800px) {

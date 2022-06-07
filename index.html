@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudoku-junior</title>
+    <!-- mobile status bar color -->
+    <meta name="theme-color" content="#fff" />
+    <title>Sudoku Junior</title>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +41,7 @@
                 <div class="btn btn-tan" id="btn-play">New game</div>
             </div>
             <!-- end start screen -->
+
             <!-- game screen -->
             <div class="main-game" id="game-screen">
                 <div class="main-sudoku-grid">
@@ -125,6 +128,7 @@
                     <div class="main-grid-cell"></div>
                     <div class="main-grid-cell"></div>
                 </div>
+
                 <div class="main-game-info">
                     <div class="main-game-info-box main-game-info-name">
                         <span id="player-name">Andrew</span>
@@ -133,12 +137,14 @@
                         <span id="game-level">Easy</span>
                     </div>
                 </div>
+
                 <div class="main-game-info-box main-game-info-time">
                     <span id="game-time">00</span>
                     <div class="pause-btn" id="btn-pause">
                         <i class="bx bx-pause"></i>
                     </div>
                 </div>
+
                 <div class="numbers">
                     <div class="number">1</div>
                     <div class="number">2</div>
@@ -153,12 +159,14 @@
                 </div>
             </div>
             <!-- end game screen -->
+
             <!-- pause screen -->
             <div class="pause-screen" id="pause-screen">
                 <div class="btn btn-tan" id="btn-resume">Resume</div>
                 <div class="btn" id="btn-new-game">New game</div>
             </div>
             <!-- end pause screen -->
+
             <!-- result screen -->
             <div class="result-screen" id="result-screen">
                 <div class="congrate">Competed</div>
@@ -170,6 +178,8 @@
         </div>
     </div>
     <!-- end main -->
+
+
     <!-- js script -->
     <script src="./assets/js/sudoku.js"></script>
     <script src="./assets/js/index.js"></script>
